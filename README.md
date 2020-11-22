@@ -1,3 +1,3 @@
 # python
-Commit Test
+My attempt to consolidate python know how.
 
