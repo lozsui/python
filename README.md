@@ -1,3 +1,3 @@
 # python
-My attempt to consolidate python know how.
+My attempt to consolidate my python Know-how.
 
