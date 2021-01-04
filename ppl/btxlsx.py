@@ -10,7 +10,7 @@ import os
 import pandas as pd
 
 
-def concat():
+def concat_xlsx_sheets():
     os.chdir('../files')
     first_records = pd.read_excel('pandas-001.xlsx')
     second_records = pd.read_excel('pandas-002.xlsx')
@@ -19,16 +19,19 @@ def concat():
     return df
 
 
-def group_by():
-    df = concat()
-    result = df.groupby(by=['Item'])['Quantity'].sum()
+def group_and_sum():
+    df = concat_xlsx_sheets()
+    return df.groupby(by=['Item'])['Quantity'].sum()
+
+    """
     index = result.index
     array = result.array
     my_dataframe = pd.DataFrame(array,
                                 index=index,
                                 columns=['Aggregated Quantities'])
-    print(my_dataframe)
+    print(result['Car'])
     print('stop here')
+    """
 
 """
 def next():
@@ -43,3 +46,10 @@ def next():
     print(df_all)
     return 1300.0
 """
+
+
+def create_df():
+    index = [0, 1, 2]
+    array = [['Car', 4], ['Tomato', 6], ['Carpet', 14]]
+    columns = ['Item', 'Quantity']
+    return pd.DataFrame(array, index=index, columns=columns)
