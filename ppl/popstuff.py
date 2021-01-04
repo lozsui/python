@@ -71,3 +71,19 @@ def merge_xlsx():
                 col_number = col_name_to_int_map['Author']
                 my_df_1.iat[row.Index, col_number] = other_author
     my_df_1.to_excel('xlsx_C.xlsx')
+
+
+def code_to_number(letter_code):
+    d = {
+        'S': 40,
+        'C': 39,
+        'I': 39,
+        'R': 35,
+        'E': 34,
+        'A': 20,
+    }
+    return d[letter_code[0]] + d[letter_code[1]] + d[letter_code[2]]
+
+
+if __name__ == "__main__":
+    print('Hello World')

@@ -42,3 +42,11 @@ def test_merge_xlsx():
     my_df = pd.read_excel('xlsx_C.xlsx')
     author = my_df.iloc[1, 3]
     assert author == 'Peter Gugelhopf'
+
+
+@pytest.mark.parametrize("test_input,expected", [('SIC', 118), ('CIR', 113)])
+def test_code_to_number(test_input, expected):
+    """
+    No comment.
+    """
+    assert popstuff.code_to_number(test_input) == expected
