@@ -50,3 +50,32 @@ def test_code_to_number(test_input, expected):
     No comment.
     """
     assert popstuff.code_to_number(test_input) == expected
+
+
+def test_list_comprehension_one():
+    """
+    No comment.
+    """
+    concated_list = popstuff.list_comprehension_one()
+    list_of_strings = ['1', '2', '3', '4', '5', '6']
+    assert concated_list == list_of_strings
+
+
+def test_maybe_combinatorics():
+    """
+    No comment.
+    """
+    rank_suit_tuples = popstuff.maybe_combinatorics()
+    assert rank_suit_tuples[0] == ('2', 'spades')
+    assert rank_suit_tuples[1] == ('3', 'spades')
+    assert rank_suit_tuples[2] == ('4', 'spades')
+
+
+def test_cantons_construct_one():
+    """
+    No comment.
+    """
+    cantons = popstuff.Cantons()
+    canton = cantons[0]
+    assert canton.name == 'Appenzell Innerrhoden'
+    assert canton.capital == 'Appenzell'

@@ -5,6 +5,7 @@ Idiosyncratic python things.
 """
 
 import os
+import collections
 
 import pandas as pd
 
@@ -83,6 +84,49 @@ def code_to_number(letter_code):
         'A': 20,
     }
     return d[letter_code[0]] + d[letter_code[1]] + d[letter_code[2]]
+
+
+def list_comprehension_one():
+    part_one = [str(n) for n in range(1, 4)]
+    part_two = [str(n) for n in range(4, 7)]
+    return part_one + part_two
+
+
+def maybe_combinatorics():
+    """
+    From 'A Pythonic Card Deck' by Luciano Ramalho (https://github.com/fluentpython/example-code-2e)
+    """
+    ranks = [str(n) for n in range(2, 11)] + list('JQKA')
+    suits = 'spades diamonds clubs hearts'.split()
+    rank_suit_tuples = [(rank, suit) for suit in suits for rank in ranks]
+    return rank_suit_tuples
+
+
+Canton = collections.namedtuple('Canton', ['name', 'capital'])
+
+
+class Cantons:
+
+    def __init__(self):
+        self._cantons = [
+            Canton('Appenzell Innerrhoden', 'Appenzell'),
+            Canton('Appenzell Ausserrhoden', 'Herisau'),
+            Canton('Basel-Landschaft', 'Liestal'),
+            Canton('Graubünden', 'Chur'),
+            Canton('Jura', 'Delsberg'),
+            Canton('Nidwalden', 'Stans'),
+            Canton('Obwalden', 'Sarnen'),
+            Canton('Thurgau', 'Frauenfeld'),
+            Canton('Ticino', 'Bellinzona'),
+            Canton('Uri', 'Altdorf'),
+            Canton('Wallis', 'Sitten'),
+            Canton('Vaud', 'Lausanne'),]
+
+    def __len__(self):
+        return len(self._cantons)
+
+    def __getitem__(self, item):
+        return self._cantons[item]
 
 
 if __name__ == "__main__":
