@@ -7,6 +7,7 @@ his book Fluent Python 2nd edition.
 
 import math
 
+
 class Vector:
 
     def __init__(self, x=0, y=0):
@@ -26,3 +27,20 @@ class Vector:
 
     def __abs__(self):
         return math.hypot(self.x, self.y)
+
+
+def square_numbers(list_arg):
+    return [x*x for x in list_arg]
+
+
+def create_dishes():
+    paste = ['rigatoni', 'spaghetti']
+    sauces = ['al pesto', 'alla bolognese']
+    return [(pasta, sauce) for pasta in paste for sauce in sauces]
+
+
+def create_dishes_two():
+    paste = ['rigatoni', 'spaghetti']
+    sauces = ['al pesto', 'alla bolognese']
+    return [(pasta, sauce) for sauce in sauces for pasta in paste]
+
