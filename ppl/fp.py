@@ -58,3 +58,16 @@ def create_dishes_three():
     sauces = ['al pesto', 'alla bolognese']
     return ('%s %s' % (p, s) for s in sauces for p in paste)
 
+
+def fixed(o):
+    """
+    If you want to make sure a tuple will stay unchanged,
+    you can compute its hash.
+
+    Source: Fluent Python 2nd edition
+    """
+    try:
+        hash(o)
+    except TypeError:
+        return False
+    return True

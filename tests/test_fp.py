@@ -111,5 +111,24 @@ def test_tuples_swap():
     assert second == 'Samuel'
 
 
+def test_prefixing_with_star():
+    t = (20, 8)
+    quotient, remainder = divmod(*t)
+    assert quotient == 2
+    assert remainder == 4
 
+
+def test_if_object_is_changeable():
+    """
+    'changeable_tuple' is changable since something can be added to
+    list [3, 4].
+    """
+    changeable_tuple = (1, 2, [3, 4])
+    unchangeable_tuple = (1, 2, (3, 4))
+    b_false = False
+    b_true = True
+    # changeable_tuple[0] = 10
+    # TypeError: 'tuple' object does not support item assignment
+    assert b_false == fp.fixed(changeable_tuple)
+    assert b_true == fp.fixed(unchangeable_tuple)
 
