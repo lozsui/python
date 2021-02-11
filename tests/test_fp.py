@@ -133,5 +133,48 @@ def test_if_object_is_changeable():
     assert b_true == fp.fixed(unchangeable_tuple)
 
 
-def test_github_communication():
-    assert 1 == 1
+s = '0123456789'
+
+
+def test_slicing_example():
+    step = 2
+    assert s[::step] == '02468'
+    start = 7
+    assert s[start::step] == '79'
+    step = 3
+    assert s[::step] == '0369'
+    stop = 7
+    assert s[:stop:step] == '036'
+    assert s[::10] == '0'
+
+
+def test_slicing_in_reverse():
+    assert s[::-1] == '9876543210'
+    assert s[3::-1] == '3210'
+    assert s[::-2] == '97531'
+    assert s[3::-2] == '31'
+    assert s[::-3] == '9630'
+    assert s[::10] == '0'
+
+
+def test_slice_method_example():
+    row = '01234567890123456789'
+    row = 'Samuel Bächler    42'
+    first_name = slice(0, 7)
+    last_name = slice(7, 18)
+    age = slice(18, 20)
+    assert row[first_name] == 'Samuel '
+    assert row[last_name] == 'Bächler    '
+    assert row[age] == '42'
+
+
+"""
+
+In fp.ipynb in the notebooks section there are examples on
+
+- Grabbing Excess Items: a, b, *rest = range(5)
+- Grabbing Excess Items: a, *middle, b = range(5)
+- Nested Unpacking: person, age, height, (father, mother) in persons
+- Splitting: my_list[:2]
+
+"""
