@@ -132,3 +132,6 @@ def test_if_object_is_changeable():
     assert b_false == fp.fixed(changeable_tuple)
     assert b_true == fp.fixed(unchangeable_tuple)
 
+
+def test_github_communication():
+    assert 1 == 1
