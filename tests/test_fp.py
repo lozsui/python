@@ -222,3 +222,32 @@ def test_mute_pylint_warning():
         - Nested Unpacking: person, age, height, (father, mother) in persons
         - Splitting: my_list[:2]
     """
+
+
+def test_sequence_with_asterisk():
+    """
+    Multiply a list by a scalar.
+    """
+    my_abc = 'abc'
+    assert my_abc[0] == 'a'
+    assert 3 * my_abc == 'abcabcabc'
+    l_1 = [1, 2]
+    assert [1, 2, 1, 2, 1, 2] == 3 * l_1
+
+
+def test_augmented_assignment_operators():
+    """
+    When augmented operator is used on mutable objects (e.g. list) then
+    mostly '__iadd__' (in place addition) is used behind the scenes. Therefore
+    the object remains the same.
+    In case an augmented operator is used on immutable objects a new object
+    will always be created.
+    """
+    l_1 = [1, 2]
+    l_1_id = id(l_1)
+    l_1 *= 3
+    assert l_1_id == id(l_1)
+    t_1 = (1, 2)
+    t_1_id = id(t_1)
+    t_1 *= 3
+    assert t_1_id != id(t_1)
