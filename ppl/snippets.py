@@ -17,8 +17,13 @@ def count_words(text):
 
 
 def count_sentences(text):
+    """
+    Hints for improvement
+    - Last element in the splitted text is no sentence => minus 1 form no_of_sentences
+    """
     splitted_by_full_stop = text.split(".")
     print("")
     for sentence in splitted_by_full_stop:
         print("sentence: " + sentence)
-    return len(splitted_by_full_stop)
+    no_of_sentences = len(splitted_by_full_stop)
+    return no_of_sentences
