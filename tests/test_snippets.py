@@ -17,3 +17,7 @@ def test_count_sentences():
     os.chdir('../files')
     with open("word_count.txt", "r") as fh:
         assert ppl.snippets.count_sentences(fh.read()) == 6
+
+
+def test_from_chinese_to_english():
+    ppl.snippets.from_chinese_to_english()

@@ -27,3 +27,7 @@ def count_sentences(text):
         print("sentence: " + sentence)
     no_of_sentences = len(splitted_by_full_stop)
     return no_of_sentences
+
+
+def from_chinese_to_english():
+    pass
