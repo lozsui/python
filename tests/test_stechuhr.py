@@ -1,16 +1,64 @@
 """
-No comment.
+This code is work in progress...
 """
 
 import pytest
 import ppl.stechuhr
 from datetime import date
-from datetime import time
+from datetime import datetime
+from datetime import timedelta
 
-@pytest.mark.parametrize("test_input,expected", [(date(year=2021, day=27, month=4), 8.4),])
-def test_hours_worked(test_input, expected):
-    # no working example yet
+"""
+How can I declare test_input as array that I can do
+
+    for dt in test_input:
+        su.add_timestamp(dt)
+
+@pytest.mark.parametrize("test_input,expected", [
+    [datetime(year=2021, day=27, month=4, hour=9, minute=0),
+     datetime(year=2021, day=27, month=4, hour=10, minute=0), ],
+    [date(year=2021, day=27, month=4), 1]])
+"""
+
+
+def test_hours_worked():
     su = ppl.stechuhr.Stechuhr()
-    ts = ppl.stechuhr.TimeStamp(day=test_input, time_arg=time(hour=9, minute=0))
-    su.add_timestamp(ts)
-    su.hours_worked_at(test_input)
+    timestamps = [
+        datetime(year=2021, day=27, month=4, hour=9, minute=0),
+        datetime(year=2021, day=27, month=4, hour=12, minute=0),
+        datetime(year=2021, day=27, month=4, hour=13, minute=0),
+        datetime(year=2021, day=27, month=4, hour=16, minute=0),
+    ]
+    su.timestamps = timestamps
+    hours_worked = su.hours_worked_at(date(year=2021, day=27, month=4))
+    print()
+    print(hours_worked)
+    assert hours_worked == timedelta(hours=6)
+
+
+def test_hours_worked_two():
+    su = ppl.stechuhr.Stechuhr()
+    tds = [
+        timedelta(hours=10, minutes=31),
+        timedelta(hours=8, minutes=51),
+        timedelta(hours=6, minutes=3),
+        timedelta(hours=8, minutes=40),
+        timedelta(hours=7, minutes=00),
+        timedelta(hours=8, minutes=56),
+        timedelta(hours=5, minutes=00),
+        timedelta(hours=7, minutes=44),
+        timedelta(hours=7, minutes=30),
+        timedelta(hours=6, minutes=39),
+        timedelta(hours=9, minutes=14),
+        timedelta(hours=7, minutes=50),
+        timedelta(hours=8, minutes=55),
+        timedelta(hours=6, minutes=49),
+    ]
+    su.timedeltas = tds
+    actual_hours_worked = su.sum_timedeltas()
+    expected_hours_worked = timedelta(hours=109, minutes=42)
+    print()
+    print("13 days à 8h 24': ", 13 * timedelta(hours=8, minutes=24))
+    print("Actually Worked: ", actual_hours_worked)
+    assert actual_hours_worked == expected_hours_worked
+

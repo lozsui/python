@@ -3,11 +3,17 @@
 """
 An employee reports to the Stechuhr when he enters or leaves the government building. With this data
 the Stechuhr calculates how long the employee worked on a specific day.
+
+Do not use this code as an implementation for the above mentioned, :-(. It is work in progress.
 """
 
 from datetime import time
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
 
-class TimeStamp():
+
+class TimeStamp:
 
     def __init__(self, day=None, time_arg=None):
         self.day = day
@@ -21,12 +27,22 @@ class Stechuhr():
 
     def __init__(self):
         self.timestamps = []
+        self.timedeltas = []
 
-    def add_timestamp(self, timestamp):
-        self.timestamps.append(timestamp)
-
-    def hours_worked_at(self, date):
-        time_worked = time(hour=0, minute=0)
+    def hours_worked_at(self, d):
+        previous_ts = None
+        td = timedelta(seconds=0)
         for ts in self.timestamps:
-            if ts.day == date:
-                time_worked += ts.time
+            if date(year=ts.year, month=ts.month, day=ts.day) == d:
+                if previous_ts is None:
+                    previous_ts = ts
+                else:
+                    td += ts - previous_ts
+                    previous_ts = None
+        return td
+
+    def sum_timedeltas(self):
+        td_sum = timedelta(seconds=0)
+        for td in self.timedeltas:
+            td_sum += td
+        return td_sum
