@@ -27,3 +27,8 @@ def count_sentences(text):
         print("sentence: " + sentence)
     no_of_sentences = len(splitted_by_full_stop)
     return no_of_sentences
+
+
+def get_metadata_from_image(fh):
+    # https://stackoverflow.com/questions/21697645/how-to-extract-metadata-from-a-image-using-python
+    return None

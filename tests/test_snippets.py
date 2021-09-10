@@ -18,3 +18,8 @@ def test_count_sentences():
     with open("word_count.txt", "r") as fh:
         assert ppl.snippets.count_sentences(fh.read()) == 6
 
+
+def test_get_metadata_from_image():
+    os.chdir('../files')
+    with open("test_metadata", "r") as fh:
+        ppl.snippets.get_metadata_from_image(fh)
