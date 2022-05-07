@@ -32,7 +32,6 @@ def count_sentences(text):
 
 
 def get_metadata_from_image(file):
-    # https://stackoverflow.com/questions/21697645/how-to-extract-metadata-from-a-image-using-python
     with Image.open(file) as im:
         print(im.info)
         print(im.mode)
