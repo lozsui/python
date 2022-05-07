@@ -7,37 +7,43 @@ This is an attempt to consolidate my python Know-how.
 
 #### Compilation for Debian Bullseye
 
-According to [install-dependencies](https://devguide.python.org/setup/#install-dependencies) build dependencies can be installed as follows:
-> apt build-dep python3.9
+1. [Get the source code](https://devguide.python.org/setup/#get-the-source-code)
+2. [Install dependencies](https://devguide.python.org/setup/#install-dependencies)
+3. Compile and install according to readme.rst
 
-Next according to README.rst type:
-> ./configure --prefix="/home/shb/python-3.9.1" --enable-optimizations
-> make 
+According to [install-dependencies](https://devguide.python.org/setup/#install-dependencies) build dependencies can be installed as follows:
+
+> git clone https://github.com/python/cpython.git
+> 
+> git checkout v3.10.4
+> 
+> mkdir -p ~/python/python3.10.4_debug
+> 
+> ./configure --prefix="~/python/python3.10.4_debug" --with-pydebug
+> 
+> make
+> 
 > make test
-> ...snip
 > 
-> == Tests result: SUCCESS ==
-> 
-> 411 tests OK.
-> 
-> 14 tests skipped:
->    test_devpoll test_gdb test_ioctl test_kqueue test_msilib
->    test_ossaudiodev test_startfile test_tix test_tk test_ttk_guionly
->    test_winconsoleio test_winreg test_winsound test_zipfile64
->
-> Total duration: 7 min 46 sec
-> Tests result: SUCCESS
 > make install
 
-In case command above does not do the trick install these packages:
->  build-essential bzip2-doc libbz2-dev libffi-dev libgdbm-dev libncurses-dev libnss3-dev libreadline-dev libsqlite3-dev libssl-dev zlib1g-dev liblzma-dev tk-dev
-
 #### Setting Up a Virtual Environment
-Install pip and virtualenv:
-> python3-pip python3-virtualenv
 
 Set up virtual environment:
-> mkdir ~/venv-play-python
+> mkdir ~/python/python-env
 > 
-> virtualenv -p ~/python-3.9.1/bin/python3 venv-play-python
+> cd ~/python/python3.10.4_debug/
+> 
+> bin/virtualenv -p ~/python/python3.10.4_debug/bin/python3 ~/python/python-env
 
+#### Install Requirements
+> source ~/python/python-env/bin/activate
+> 
+> python -m pip install -r ~/003-GitHub/python/requirements.txt
+
+#### Run Tests
+> source ~/python/python-env/bin/activate
+> 
+> cd ~/003-GitHub/python/tests
+> 
+> python -m pytest

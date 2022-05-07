@@ -4,6 +4,8 @@
 Snippets I came across.
 """
 
+from PIL import Image
+
 
 def count_words(text):
     tokens = text.split()
@@ -26,9 +28,17 @@ def count_sentences(text):
     for sentence in splitted_by_full_stop:
         print("sentence: " + sentence)
     no_of_sentences = len(splitted_by_full_stop)
-    return no_of_sentences
+    return no_of_sentences - 1
 
 
-def get_metadata_from_image(fh):
+def get_metadata_from_image(file):
     # https://stackoverflow.com/questions/21697645/how-to-extract-metadata-from-a-image-using-python
-    return None
+    with Image.open(file) as im:
+        print(im.info)
+        print(im.mode)
+        print(im.format)
+        print(im.format_description)
+        print(im.im)
+        print(im.palette)
+        print(im.pyaccess)
+        print(im.readonly)
