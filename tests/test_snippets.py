@@ -21,4 +21,4 @@ def test_count_sentences():
 
 def test_get_metadata_from_image():
     os.chdir('../files')
-    ppl.snippets.get_metadata_from_image("Xi-Jinping.jpeg")
+    ppl.snippets.get_metadata_from_image("fempowerment.jpg")
