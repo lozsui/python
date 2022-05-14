@@ -5,6 +5,8 @@ Snippets I came across.
 """
 
 from PIL import Image
+from bs4 import BeautifulSoup
+
 
 
 def count_words(text):
@@ -41,3 +43,21 @@ def get_metadata_from_image(file):
         print(im.palette)
         print(im.pyaccess)
         print(im.readonly)
+
+
+def parse_html(file):
+    with open(file, "r") as fh:
+        html = fh.read()
+        soup = BeautifulSoup(html, 'html.parser')
+        for tr in soup.find_all("tr"):
+            line = ""
+            counter = 0
+            for td in tr:
+                counter += 1
+                # print(counter)
+                if counter in [1, 3]:
+                    line = line + "|" + td.getText()
+                # print(td.getText())
+            print(line + "|")
+
+
