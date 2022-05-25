@@ -62,3 +62,40 @@ def test_hours_worked_two():
     print("Actually Worked: ", actual_hours_worked)
     assert actual_hours_worked == expected_hours_worked
 
+def test_hours_worked_july():
+    su = ppl.stechuhr.Stechuhr()
+    tds = [
+        # Aktuelles Saldo
+        #
+        # Wochensoll: 25h 12'
+        #
+        # Für Oktober siehe Notiz in todos_et_al.org vom
+        # 2. November.
+        # KW 44
+        # Dienstag
+        timedelta(hours=7, minutes=17),
+        # Mittwoch
+        timedelta(hours=8, minutes=12),
+        # Donnerstag
+        timedelta(hours=8, minutes=3),
+        # Freitag
+        timedelta(hours=9, minutes=4),
+        # KW 45
+        # Dienstag
+        timedelta(hours=0, minutes=0),
+        # Mittwoch
+        timedelta(hours=9, minutes=0),
+        # Donnerstag
+        timedelta(hours=8, minutes=24),
+        # Freitag
+        timedelta(hours=0, minutes=24),
+    ]
+    su.timedeltas = tds
+    actual_hours_worked = su.sum_timedeltas()
+    expected_hours_worked = 2 * timedelta(hours=25, minutes=12)
+    print()
+    print("x days à 8h 24': ", expected_hours_worked)
+    print("Actually Worked: ", actual_hours_worked)
+    print("Delta: ", actual_hours_worked - expected_hours_worked)
+    assert actual_hours_worked == expected_hours_worked
+

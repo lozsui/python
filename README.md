@@ -47,3 +47,29 @@ Set up virtual environment:
 > cd ~/003-GitHub/python/tests
 > 
 > python -m pytest
+
+### Windows 10
+
+#### Setting Up a Virtual Environment
+
+Assume the Python interpreter was installed to 'C:\GNOT\Python' and this project is cloned to 'C:\GIT\GITHUB\python'.
+
+> PS C:\GIT\GITHUB\python> & C:/GNOT/Python/python.exe -m venv .venv
+
+#### Install Requirements
+
+> PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
+> 
+> (.venv) PS C:\GIT\GITHUB\python> python -m pip install -r requirements.txt
+
+If there is a proxy:
+
+>  (.venv) PS C:\GIT\GITHUB\python> python -m pip install --proxy http://USER:PASSWORD@YOUR.PROXY:PORT -r requirements.txt
+
+#### Run Tests
+
+Activate your .venv and type command as in listing below.
+
+> PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
+> 
+> python -m pytest
