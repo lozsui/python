@@ -1,11 +1,37 @@
 # python
 This is an attempt to consolidate my python Know-how.
+## Git Configuration
+
+>snip...
+>
+>[remote "origin"]<br>
+>	url = https://GITHUB_USER:TOKEN@github.com/lozsui/python.git<br>
+>	fetch = +refs/heads/*:refs/remotes/origin/*
+
 
 ## Setup Python Environment
 
+### Ubuntu 22.04.2 LTS
+
+#### Setup Virtual Environment and Install Requirements
+
+Create a virtual environment in the root folder of this project.
+
+>python3 -m venv tests/.venv<br>
+>source tests/.venv/bin/activate<br>
+>(.venv) lozsui@host:~/python$ pip install -r requirements.txt
+
+#### Run Tests
+
+>source tests/.venv/bin/activate
+>(.venv) lozsui@host:~/python$ export $(cat tests/.env | grep -v '^#')
+>(.venv) lozsui@host:~/python/tests$ pytest test_*
+>(.venv) lozsui@host:~/python/tests$ pytest -s test_*
+
+
 ### Debian Bullseye
 
-#### Compilation for Debian Bullseye
+#### Compilation for Debian Bullseye (the hard way)
 
 1. [Get the source code](https://devguide.python.org/setup/#get-the-source-code)
 2. [Install dependencies](https://devguide.python.org/setup/#install-dependencies)

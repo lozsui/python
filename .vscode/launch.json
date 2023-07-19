@@ -1,0 +1,18 @@
+{
+    // The version must be specified to debug pytest test. Otherwise, following
+    // error is reported "Could not load unit test config from launch.json as
+    // it is missing a field" and debugging session is not started.
+    "version": "0.2.0",
+    "configurations": [
+        // Pytest configuration - specify path to environment file
+        {
+            "name": "Tests: pytest",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceRoot}/tests",
+            "envFile": "${workspaceRoot}/tests/.env",
+            "console": "integratedTerminal"
+        }
+    ]
+}
