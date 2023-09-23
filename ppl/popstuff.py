@@ -32,10 +32,12 @@ def using_os():
 def get_coordinates(author_to_find):
     """
     Pass the name of an author. Get row number and column number of
-    'cell' where author is found. It is possibly not the smartest wqy
+    'cell' where author is found. It is possibly not the smartest way
     to do that.
     """
     os.chdir('../files')
+    # I used when debugging on VS code.
+    # os.chdir('/home/shb/003-Git/github.com/lozsui/python/files')
     my_df = pd.read_excel('xlsx_B.xlsx')
     column_number = 0
     name_number_map = {}
@@ -56,6 +58,8 @@ def merge_xlsx():
     xlsx_C.xlsx with merged Author information.
     """
     os.chdir('../files')
+    # I used when debugging on VS code.
+    # os.chdir('/home/shb/003-Git/github.com/lozsui/python/files')
     my_df_1 = pd.read_excel('xlsx_A.xlsx')
     my_df_2 = pd.read_excel('xlsx_B.xlsx')
     col_name_to_int_map = {
@@ -129,5 +133,11 @@ class Cantons:
         return self._cantons[item]
 
 
+def tnr():
+    cantons = Cantons()
+    print(len(cantons))
+    print(cantons[0])
+
+
 if __name__ == "__main__":
-    print('Hello World')
+    tnr()
