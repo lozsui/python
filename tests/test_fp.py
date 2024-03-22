@@ -10,6 +10,7 @@ import ppl.fp as fp
 def test_to_string():
     """
     How __repr__ is used behind the scene.
+    some more...
     """
     my_vector = fp.Vector(3, 8)
     str_v = str(my_vector)
