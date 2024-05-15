@@ -82,6 +82,12 @@ Assume the Python interpreter was installed to 'C:\GNOT\Python' and this project
 
 > PS C:\GIT\GITHUB\python> & C:/GNOT/Python/python.exe -m venv .venv
 
+or
+
+> PS C:\GIT\GITHUB\python> & python.exe -m venv .venv
+
+if PS knows the path to your python binary.
+
 #### Install Requirements
 
 > PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
