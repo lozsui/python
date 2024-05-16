@@ -40,3 +40,7 @@ def test_format_string2():
     name = "lozsui"
     greeting = "Hello {name}!"
     assert greeting.format(name=name) == "Hello lozsui!"
+
+def test_multiply_string():
+    my_str = "3"
+    assert my_str * 3 == "333"
