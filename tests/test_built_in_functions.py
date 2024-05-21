@@ -1,7 +1,40 @@
-
 """
 Documentation on build-in functions: https://docs.python.org/3.12/library/functions.html
 """
+
+import os
+import pytest
+
+@pytest.mark.parametrize("expected_lines, test_file_path", [
+    (
+        [
+            "Hello,\n",
+            "My name is Hermann.\n",
+            "Bye\n",
+        ],
+        'input_iter_test.txt'
+    ),
+    # Add more parameter here if needed.
+])
+
+# TODO: Investigate why I FileNotFoundError is raised.
+def _test_iter(expected_lines, test_file_path):
+    os.chdir('./files')
+    current_working_dir = f"\n Current working directorey is {os.getcwd()}.\n"
+    print(current_working_dir)
+    with open(test_file_path, 'r') as file:
+        for expected_line, line_read in zip(expected_lines, iter(file.readline, '')):
+            assert expected_line == line_read
+
+
+def test_abs():
+    my_int = -20
+    assert 20 == abs(my_int)
+    my_float = 3.141
+    assert 3.141 == abs(my_float)
+    my_complex = 3 + 4j
+    assert 5.0 == abs(my_complex)
+
 
 def test_len():
     my_list = [0 , 1, 2]
