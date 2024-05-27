@@ -105,3 +105,9 @@ Activate your .venv and type command as in listing below.
 > PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
 > 
 > python -m pytest
+
+# Ressources
+
+## The Complete Python Course
+
+Jose Salvatierra Fuentes created quite a nice course on Python. Code Snippets of this course on here: [Code on 'The Complete Python Course' on github](https://github.com/PacktPublishing/The-Complete-Python-Course).

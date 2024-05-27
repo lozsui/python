@@ -1,3 +1,6 @@
+"""
+Inspired by https://github.com/PacktPublishing/The-Complete-Python-Course/tree/master/1_intro/lectures
+"""
 
 def test_bigger_or_equal():
     bigger_or_equal = 42 >= 41

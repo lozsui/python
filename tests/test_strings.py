@@ -1,3 +1,6 @@
+"""
+Inspired by https://github.com/PacktPublishing/The-Complete-Python-Course/tree/master/1_intro/lectures
+"""
 
 
 def test_multiline():
