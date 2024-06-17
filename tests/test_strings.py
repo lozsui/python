@@ -1,6 +1,7 @@
 """
 Inspired by https://github.com/PacktPublishing/The-Complete-Python-Course/tree/master/1_intro/lectures
 """
+import datetime
 
 
 def test_multiline():
@@ -27,6 +28,10 @@ class FStringDemo():
 def test_f_string2():
     o = FStringDemo()
     assert f"{o}" == "Instance of FStringDemo"
+
+def test_f_string_with_date():
+    my_date = datetime.datetime.now()
+    print(f"Todays date is {my_date}")
 
 def test_format_string():
     name = "lozsui"
