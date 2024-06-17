@@ -104,7 +104,12 @@ Activate your .venv and type command as in listing below.
 
 > PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
 > 
-> python -m pytest
+> pytest
+
+!!! Hint on 'No module named 'cards': This is because of 'test_count.py'. Either comment out these tests or install cards like so:
+
+    (venv) $ cd .\learnpytest\
+    (venv) $ pip install ./cards_proj/
 
 # Ressources
 
