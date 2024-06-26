@@ -5,3 +5,7 @@ Inspired by https://github.com/PacktPublishing/The-Complete-Python-Course/tree/m
 def test_lambda():
     average = lambda x: sum(x) / len(x)
     assert 2.5 == average([1, 2, 3, 4])
+
+def test_lambda_2():
+    my_lambda = lambda : print('my message')
+    my_lambda()
