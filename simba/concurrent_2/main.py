@@ -1,6 +1,8 @@
 """
 Unfinished thingy, but it runs and does something. At least on
 a Ubuntu sytem.
+
+It does not run on Windows.
 """
 
 import multiprocessing
