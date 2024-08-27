@@ -1,5 +1,14 @@
 # python
-This is an attempt to consolidate my python Know-how.
+
+An attempt to consolidate my python Know-how.
+
+## Table of Contents
+
+- [Git Configuration](#git-configuration)
+- [Classes](./classes/readme.md)
+- [Further Reading](#further-reading)
+  - [The Complete Python Course](#the-complete-python-course)
+
 ## Git Configuration
 
 >snip...
@@ -111,7 +120,7 @@ Activate your .venv and type command as in listing below.
     (venv) $ cd .\learnpytest\
     (venv) $ pip install ./cards_proj/
 
-# Ressources
+# Further Reading
 
 ## The Complete Python Course
 
