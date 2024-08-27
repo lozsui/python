@@ -2,12 +2,13 @@
 
 An attempt to consolidate my python Know-how.
 
-## Table of Contents
+## Index
 
-- [Git Configuration](#git-configuration)
 - [Classes](./classes/readme.md)
 - [Further Reading](#further-reading)
   - [The Complete Python Course](#the-complete-python-course)
+- [Git Configuration](#git-configuration)
+- [Pytest](./learnpytest/readme.md)
 
 ## Git Configuration
 

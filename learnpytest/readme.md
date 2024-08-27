@@ -1,7 +1,8 @@
-# Setting Up
+# Setting Up on Windows
 
 ```
-PS C:\Temp\python> .venv/Scripts/Activate.ps1
+PS C:\Temp\python\learnpytest> & C:/GNOT/python/python.3.11.2/python.exe -m venv .venv
+PS C:\Temp\python\learnpytest> .venv/Scripts/Activate.ps1
 (.venv) PS C:\Temp\python> python -m pip install  --proxy http://USER:PASSWORD@YOUR.PROXY:PORT --upgrade pip
 (.venv) PS C:\Temp\python\learnpytest> pip install --proxy http://USER:PASSWORD@YOUR.PROXY:PORT ./cards_proj
 ```
