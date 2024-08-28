@@ -4,6 +4,7 @@ An attempt to consolidate my python Know-how.
 
 ## Index
 
+- [Challenges](#challenges)
 - [Classes](./classes/readme.md)
 - [Further Reading](#further-reading)
   - [The Complete Python Course](#the-complete-python-course)
@@ -120,6 +121,10 @@ Activate your .venv and type command as in listing below.
 
     (venv) $ cd .\learnpytest\
     (venv) $ pip install ./cards_proj/
+
+# Challenges
+
+- [Erstellen eines Kommandozeilentools](./cmd_util/readme.md)
 
 # Further Reading
 
