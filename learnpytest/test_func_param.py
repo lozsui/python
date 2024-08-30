@@ -12,6 +12,10 @@ import pytest
 from cards import Card
 
 
+pytestmark = pytest.mark.finish
+
+@pytest.mark.smoke
+@pytest.mark.exception
 def test_finish_from_in_prog(cards_db):
     index = cards_db.add_card(Card("second edition", state="in prog"))
     cards_db.finish(index)
@@ -53,7 +57,14 @@ def test_finish(cards_db, start_summary, start_state):
     assert card.state == "done"
 
 
-@pytest.mark.parametrize("start_state", ["done", "in prog", "todo"])
+@pytest.mark.parametrize(
+        "start_state",
+        [
+            "done",
+            pytest.param("in prog", marks=pytest.mark.smoke),
+            "todo",
+        ],
+)
 def test_finish_simple(cards_db, start_state):
     c = Card("One fits all", state=start_state)
     index = cards_db.add_card(c)
@@ -62,7 +73,14 @@ def test_finish_simple(cards_db, start_state):
     assert card.state == "done"
 
 
-@pytest.fixture(params=["done", "in prog", "todo"], name="start_state")
+@pytest.fixture(
+        params=[
+            "done",
+            pytest.param("in prog", marks=pytest.mark.smoke),
+            "todo",
+        ],
+        name="start_state",
+)
 def start_state_fixture(request):
     return request.param
 

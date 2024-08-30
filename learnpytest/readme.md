@@ -6,6 +6,10 @@
 - [Run test(s)](#run-tests)
 - [Setting Up on Micro$oft Window$ 10](#setting-up-on-microsoft-windows-10)
 
+# Pointer to Next
+
+- [Using “and,” “or,” “not,” and Parentheses with Markers](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/f_0071.xhtml)
+
 # Introduction
 
 Code in this folder is supposed to help me while reading [Python Testing with Pytest by Brian Okken](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/).
@@ -43,6 +47,27 @@ pytest -k test_empty
 ```
 
 # Pytest Command-Line Flags
+
+```
+pytest --help # is your friend
+```
+
+
+## Run Tests by Marker
+
+```
+pytest -m markerxy
+```
+
+See [Marker Example](./test_start.py)
+
+## Show Extra Test Summary "-r"
+
+```
+pytest -ra test_whatever.py
+=== short test summary info === 
+SKIPPED [1] test_whatever.py:5: Method XY not implemented yet
+```
 
 ## Keywords
 
