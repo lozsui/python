@@ -124,7 +124,8 @@ Activate your .venv and type command as in listing below.
 
 # Challenges
 
-- [Erstellen eines Kommandozeilentools](./cmd_util/readme.md)
+- [Command Line Util with Typer](./cmd_util/readme.md)
+- [xfail of pytest boggles my mind](./learnpytest/test_xfail.py)
 
 # Further Reading
 
