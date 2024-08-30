@@ -1,5 +1,6 @@
 # Index
 
+- [API Refernce of pytest](https://docs.pytest.org/en/latest/reference/reference.html)
 - [Command-Line Flags](#pytest-command-line-flags)
 - [Here be Dragons](#here-be-dragons)
 - [Run test(s)](#run-tests)
@@ -8,8 +9,6 @@
 # Introduction
 
 Code in this folder is supposed to help me while reading [Python Testing with Pytest by Brian Okken](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/).
-
-My bookmark: [Sharing Fixtures in conftest.py](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/f_0037.xhtml#sharing_conftest)
 
 # Setting Up on Microsoft Windows 10
 
@@ -44,6 +43,10 @@ pytest -k test_empty
 ```
 
 # Pytest Command-Line Flags
+
+## Keywords
+
+This is quite impressiv. See [Using Keywords to Select Test Cases in Brians book](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/f_0060.xhtml)
 
 ## setup-show
 
