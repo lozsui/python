@@ -9,6 +9,7 @@ An attempt to consolidate my python Know-how.
 - [Further Reading](#further-reading)
   - [The Complete Python Course](#the-complete-python-course)
 - [Git Configuration](#git-configuration)
+- [Logging](./ex001logging/README.md)
 - [Pytest](./learnpytest/readme.md)
 
 ## Git Configuration
