@@ -4,7 +4,7 @@
 
 # My Pointer to Next
 
-'Looging Flow' on ['Logging HOWTO by Vinay Sajip'](https://docs.python.org/3/howto/logging.html).
+'Looging Flow' on ['Logging Levels by Vinay Sajip'](https://docs.python.org/3/howto/logging.html#logging-levels).
 
 # Note to The Reader
 
