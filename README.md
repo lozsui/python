@@ -11,6 +11,7 @@ An attempt to consolidate my python Know-how.
 - [Git Configuration](#git-configuration)
 - [Logging](./ex001logging/README.md)
 - [Pytest](./learnpytest/readme.md)
+- [Setting Up a Virtual Environmen](#setting-up-a-virtual-environment)
 
 ## Git Configuration
 
@@ -22,6 +23,8 @@ An attempt to consolidate my python Know-how.
 
 
 ## Setup Python Environment
+
+I try to use .venv in root folder of this project for most things. See [Setting Up a Virtual Environment](#setting-up-a-virtual-environment)
 
 ### Ubuntu 22.04.2 LTS
 
@@ -98,17 +101,18 @@ or
 
 > PS C:\GIT\GITHUB\python> & python.exe -m venv .venv
 
-if PS knows the path to your python binary.
+if PS knows the path to your python binary. Put pip.ini like shown below into .venv folder.
+
+```
+[global]
+proxy = http://proxy.highly.secure:8080
+```
 
 #### Install Requirements
 
-> PS C:\GIT\GITHUB\python> & C:/GIT/GITHUB/python/.venv/Scripts/Activate.ps1
-> 
-> (.venv) PS C:\GIT\GITHUB\python> python -m pip install -r requirements.txt
-
-If there is a proxy:
-
->  (.venv) PS C:\GIT\GITHUB\python> python -m pip install --proxy http://USER:PASSWORD@YOUR.PROXY:PORT -r requirements.txt
+> PS C:\Temp\python> .venv/Scripts/Activate.ps1
+> (.venv) PS C:\Temp\python> python.exe -m pip install --upgrade pip
+> (.venv) PS C:\Temp\python> python -m pip install -r requirements.txt
 
 #### Run Tests
 
