@@ -1,0 +1,12 @@
+<library>
+    <book>
+        <title>Python Programming</title>
+        <author>John Doe</author>
+        <year>2020</year>
+    </book>
+    <book>
+        <title>Machine Learning</title>
+        <author>Jane Smith</author>
+        <year>2019</year>
+    </book>
+</library>
