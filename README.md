@@ -91,7 +91,7 @@ Set up virtual environment:
 
 ### Windows 10
 
-#### Setting Up a Virtual Environment
+#### Setting Up a Virtual Environment Windows
 
 Assume the Python interpreter was installed to 'C:\GNOT\Python' and this project is cloned to 'C:\GIT\GITHUB\python'.
 
@@ -100,6 +100,10 @@ Assume the Python interpreter was installed to 'C:\GNOT\Python' and this project
 or
 
 > PS C:\GIT\GITHUB\python> & python.exe -m venv .venv
+
+or
+
+> & C:/GNOT/python/python.3.11.2/python.exe -m venv .venv
 
 if PS knows the path to your python binary. Put pip.ini like shown below into .venv folder.
 
