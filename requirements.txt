@@ -4,4 +4,5 @@ openpyxl
 Pillow
 bs4
 pydantic
+pydantic-settings==2.3.4
 mypy
