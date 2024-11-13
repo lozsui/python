@@ -1,13 +1,20 @@
-import cmd_util
-
 import typer
 
-app = typer.Typer(add_completion=False)
+app = typer.Typer()
 
 
 @app.command()
-def version():
-    """Return version of cmd util application"""
-    print(f"...{__name__}")
-    print(cmd_util.__version__)
+def hello(name: str):
+    print(f"Hello {name}")
 
+
+@app.command()
+def goodbye(name: str, formal: bool = False):
+    if formal:
+        print(f"Goodbye Ms. {name}. Have a good day.")
+    else:
+        print(f"Bye {name}")
+
+
+if __name__ == "__main__":
+    app()
