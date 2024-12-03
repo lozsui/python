@@ -133,7 +133,6 @@ Activate your .venv and type command as in listing below.
 
 # Challenges
 
-- [Command Line Util with Typer](./cmd_util/readme.md)
 - [Explore Python Package and Project Manager uv](https://docs.astral.sh/uv/)
 - [Read Logging Tutorial](https://docs.python.org/3/howto/logging.html)
 - [xfail of pytest boggles my mind](./learnpytest/test_xfail.py)
