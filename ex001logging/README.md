@@ -4,7 +4,7 @@
 
 # My Pointer to Next
 
-'Looging Flow' on ['Logging Levels by Vinay Sajip'](https://docs.python.org/3/howto/logging.html#logging-levels).
+'???' on ['Logging Cookbook by Vinay Sajip'](https://docs.python.org/3/howto/logging-cookbook.html).
 
 # Note to The Reader
 
@@ -21,3 +21,4 @@ course one does not need to install the cards project.
 
 - ['Logging HOWTO by Vinay Sajip'](https://docs.python.org/3/howto/logging.html)
 - ['Logging Cookbook by by Vinay Sajip'](https://docs.python.org/3/howto/logging-cookbook.html)
+- ['LogRecord attributes'](https://docs.python.org/3/library/logging.html#logrecord-attributes)
