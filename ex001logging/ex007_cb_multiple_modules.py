@@ -2,16 +2,20 @@ import logging
 
 from modules import auxiliary_module
 
-# Set root logger level to DEBUG
-logging.basicConfig(level=logging.DEBUG)
-
 # create logger with 'spam_application'
 logger = logging.getLogger("spam_application")
 logger.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
 fh = logging.FileHandler("spam.log")
 fh.setLevel(logging.DEBUG)
-# create console handler with a higher log level
+"""
+Specify what is sent to console. If 'ERROR' level is
+chosen you will see nothing a console level. You need
+to see in 'spam.log' for the logs.
+
+Chose 'DEBUG' level if you want to see log messages on
+console.
+"""
 ch = logging.StreamHandler()
 ch.setLevel(logging.ERROR)
 # create formatter and add it to the handlers
@@ -32,3 +36,4 @@ logger.info("calling auxiliary_module.some_function()")
 auxiliary_module.some_function()
 logger.info("done with auxiliary_module.some_function()")
 logger.info("done with auxiliary_module.some_function()")
+logger.error("A final message for the console.")

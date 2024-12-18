@@ -12,7 +12,7 @@ class Auxiliary:
     def do_something(self):
         self.logger.info("doing something")
         a = 1 + 1
-        self.logger.info("done doing something")
+        self.logger.info(f"done doing something (1 + 1) equals {a}")
 
 
 def some_function():
