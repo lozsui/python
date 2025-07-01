@@ -61,6 +61,13 @@ pytest -m markerxy
 
 See [Marker Example](./test_start.py)
 
+## Show Print Statements "-s"
+
+```
+pytest -s test_whatever.py
+Basic Test.
+```
+
 ## Show Extra Test Summary "-r"
 
 ```
