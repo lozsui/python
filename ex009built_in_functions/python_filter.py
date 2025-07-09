@@ -42,3 +42,8 @@ print("Matched Time Series:")
 for ts in aggr_timeseries:
     print(ts.SendersTimeSeriesIdentification)
     print(ts.SendersTimeSeriesIdentification)
+
+# learn about class filter
+filtered = filter(match_schedule, schedule_timeseries)
+for f in filtered:
+    print(f)
