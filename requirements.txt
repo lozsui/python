@@ -7,3 +7,4 @@ pydantic
 pydantic-settings==2.3.4
 mypy
 typer==0.13.0
+requests==2.32.5
