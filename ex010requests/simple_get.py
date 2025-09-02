@@ -6,9 +6,24 @@ proxies = {
 }
 
 
-def get(url):
+def get_with_proxy_and_verify_false(url):
     try:
         response = requests.get(url, proxies=proxies, verify=False)
+        response.raise_for_status()
+        print("Status Code:", response.status_code)
+        print("Response Body:")
+        print(response.text)
+    except requests.exceptions.RequestException as e:
+        print("An error occurred:", e)
+
+
+def get(url):
+    """
+    Comparing to 'get_with_proxy_and_verify_false' this methode 'get' does not use
+    a proxy.
+    """
+    try:
+        response = requests.get(url)
         response.raise_for_status()
         print("Status Code:", response.status_code)
         print("Response Body:")
@@ -59,4 +74,4 @@ def get_token(url, user, pwd):
 
 
 if __name__ == "__main__":
-    get_with_token(url="https://example.com/api/foo")
+    get(url="https://acme.com/")
