@@ -3,11 +3,13 @@
 - [Virtual Environment auf Windows](#virtual-Environment-auf-Windows)
 - [Virtual Environment auf Linux](#virtual-Environment-auf-Linux)
 
+
+
 # Einleitung
 
 Es geht hier darum mein Python wissen zu repetieren und es in meinen Alltag einzubetten.
 
-# Command Line Util
+# CMD Util
 
 This code is supposed to show how a command line util can be setup. Es benützt die Libraty [Typer on pypi.org](https://pypi.org/project/typer).
 
@@ -22,11 +24,19 @@ This code is supposed to show how a command line util can be setup. Es benützt 
 
 Zur Zeit noch keinen Inhalt
 
+# Parse Things
+
+Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeignet zu sein für einfaches XML 'parsing' sowie Manipulation.
+
 # Anhang
 
 ## pytests ausführen
 
-Im Listing unten ist gezeigt, wie die Tests auf dem Abschnitt 'classes' ausgeführt werden können.
+Im Listing unten ist gezeigt, wie alle Tests aus 'a solved knot' auf einmal ausgeführt werden können.
+
+    (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot$ pytest
+
+Im Listing unten ist gezeigt, wie die Tests aus dem Abschnitt 'classes' ausgeführt werden können.
 
     (.venv) rupert@lx1g9:~/003-github.com/python/a_solved_knot$ pytest classes/test_classes.py
 
@@ -40,12 +50,20 @@ Im Listing unten ist gezeigt, wie die Tests auf dem Abschnitt 'classes' ausgefü
 
 Stand 16. Oktober 2025
 
-## Virtual Environment auf Linux
+## pip
+
+### Installierte Packete anzeigen
+
+    (.venv) shb@lx1g9:~/003-github.com/python$ pip list
+
+## Virtual Environments
+
+### Virtual Environment auf Linux
 
     rupert@lx1g9:~/003-github.com/python/a_solved_knot$ python -m venv .venv
     rupert@lx1g9:~/003-github.com/python/a_solved_knot$ source .venv/bin/activate
 
-## Virtual Environment auf Windows
+### Virtual Environment auf Windows
 
 Im Listing unten ein Beispiel wie ein '.venv' auf Windows aktiviert wird.
 
