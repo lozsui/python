@@ -22,7 +22,13 @@ This code is supposed to show how a command line util can be setup. Es benützt 
 
 # Klassen
 
-Zur Zeit noch keinen Inhalt
+Bei Luciano Ramalho (Fluent Python) habe ich zu 'Data Class Builder' dazugelernt. Wie man im Buch 'Fluent Python' liest kann man als 'Shortcuts' die unten genannten Konstrukte brauchen, um 'data classes' zu schreiben:
+
+- collections.namedtuple
+- typing.NamedTuple
+- @dataclasses.dataclass
+
+Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class builders, we will discuss why Data Class is also the name of a code smell: a coding pattern that may be a symptom of poor object-oriented design.'
 
 # Parse Things
 
