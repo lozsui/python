@@ -5,7 +5,7 @@ No comment.
 """
 
 from dataclasses import asdict
-import Klassen.hello_dataclass as bb
+import Klassen.my_dataclass as bb
 
 def test_dog_class():
     my_dog = bb.Dog(name="Yoy", sex="f")
