@@ -7,6 +7,17 @@
 
 Es geht hier darum mein Python wissen zu repetieren und es in meinen Alltag einzubetten.
 
+# Command Line Util
+
+This code is supposed to show how a command line util can be setup. Es benützt die Libraty [Typer on pypi.org](https://pypi.org/project/typer).
+
+## Getting Started mit Command Line Util
+
+    (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py --help
+    (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello --help
+    (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello Samuel
+    (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello "Hans Jürgen"
+
 # Klassen
 
 Zur Zeit noch keinen Inhalt
