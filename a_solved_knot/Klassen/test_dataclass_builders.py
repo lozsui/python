@@ -1,10 +1,25 @@
-from Klassen.dataclass_builders import NamedTupleDog, DataclassDog
+from Klassen.dataclass_builders import NamedTupleDog, DataclassDog, Dog
 from dataclasses import asdict
 from collections import namedtuple
 
 """
 Siehe auch Kapitel 5 'Data Class Builders' in Fluent Python von Luciano Ramelho.
 """
+
+def test_dog_class():
+    assert issubclass(Dog, object)
+    yoy = Dog(name="Yoy", sex="f")
+    assert str(yoy) == "Dog(name='Yoy', sex='f')"
+    """
+    special compared to implementation with
+
+    - collections.namedtple
+    - typing.NamedTuple
+    - @dataclasses.dataclass
+
+    """
+    assert yoy != Dog(name="Yoy", sex="f")
+
 
 def test_named_tuple_from_collections():
     Dog = namedtuple('Dog', 'name sex')
@@ -15,6 +30,10 @@ def test_named_tuple_from_collections():
 
 
 def test_named_tuple_from_typing():
+    """
+    Adds type annotation
+    compared to build from collections.namedtuple
+    """
     assert issubclass(NamedTupleDog, tuple)
 
     yoy = NamedTupleDog(name="Yoy", sex="f")
