@@ -73,7 +73,6 @@ Stand 16. Oktober 2025
 
 Im Listing unten ein Beispiel wie ein '.venv' auf Windows aktiviert wird.
 
-    PS C:\Temp\python> .venv/Scripts/Activate.ps1
-    (.venv) PS C:\Temp\python\classes> pytest
-
-
+    PS C:\Temp\python\a_solved_knot> python.exe -m venv .venv
+    PS C:\Temp\python\a_solved_knot> .\.venv\Scripts\Activate.ps1
+    
