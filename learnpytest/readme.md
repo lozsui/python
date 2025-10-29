@@ -76,6 +76,48 @@ pytest -ra test_whatever.py
 SKIPPED [1] test_whatever.py:5: Method XY not implemented yet
 ```
 
+## Trace Config
+
+```
+pytest --trace-config
+PLUGIN registered: <_pytest.config.PytestPluginManager object at 0x7efcd9535550>
+PLUGIN registered: <_pytest.config.Config object at 0x7efcd93bd4d0>
+PLUGIN registered: <module '_pytest.mark' from '/usr/local/lib/python3.11/site-packages/_pytest/mark/__init__.py'>
+PLUGIN registered: <module '_pytest.main' from '/usr/local/lib/python3.11/site-packages/_pytest/main.py'>
+
+SNIP
+
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-8.3.3, pluggy-1.6.0
+using: pytest-8.3.3
+active plugins:
+    139624442975568     : <_pytest.config.PytestPluginManager object at 0x7efcd9535550>
+    pytestconfig        : <_pytest.config.Config object at 0x7efcd93bd4d0>
+    mark                : /usr/local/lib/python3.11/site-packages/_pytest/mark/__init__.py
+
+SNIP
+
+    terminalreporter    : <_pytest.terminal.TerminalReporter object at 0x7efcd940bed0>
+    logging-plugin      : <_pytest.logging.LoggingPlugin object at 0x7efcd946c350>
+    funcmanage          : <_pytest.fixtures.FixtureManager object at 0x7efcd9446a50>
+rootdir: /builds/OE-5060/acme-calc/acme-calc-utils
+collected 2 items
+
+SNIP
+============================== 2 passed in 0.20s ===============================
+```
+
+## pytest.ini
+
+```
+pytest -s -c tests/pytest.ini
+...snip...
+cat tests/pytest.ini
+[pytest]
+log_cli = true
+log_cli_level = DEBUG
+```
+
 ## Keywords
 
 This is quite impressiv. See [Using Keywords to Select Test Cases in Brians book](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/f_0060.xhtml)
