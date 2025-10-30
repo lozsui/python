@@ -59,5 +59,5 @@ configuration_dict = {
 logger = logging.getLogger("Initial-Logger")
 print(f"Logger Name: {logger.name} Disabled: {logger.disabled}")
 
-# logging.config.dictConfig(configuration_dict)
-# print_logger_infos()
+#logging.config.dictConfig(configuration_dict)
+#print_logger_infos()

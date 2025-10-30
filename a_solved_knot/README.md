@@ -30,6 +30,15 @@ Bei Luciano Ramalho (Fluent Python) habe ich zu 'Data Class Builder' dazugelernt
 
 Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class builders, we will discuss why Data Class is also the name of a code smell: a coding pattern that may be a symptom of poor object-oriented design.'
 
+# On Logging
+
+TODO: Verstehen, was ein Filter und was ein Handler ist. Und, verstehen, wann logger1, logger2 etc. Sinn macht.
+
+Für die Logging-Beispiele sind inbesondere folgende Packete wichtig:
+
+- python-json-logger==4.0.0
+- asgi-correlation-id==4.3.4
+
 # Parse Things
 
 Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeignet zu sein für einfaches XML 'parsing' sowie Manipulation.

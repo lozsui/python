@@ -1,11 +1,10 @@
 import logging
 import logging.config
-import yaml
 
-logging.config.fileConfig('ex006_configure_2.conf')
+logging.config.fileConfig('006a_configure_2.conf')
 
 # create logger
-logger = logging.getLogger('simpleExample')
+logger = logging.getLogger('Random-Name-fits-here')
 
 # 'application' code
 logger.debug('debug message')
