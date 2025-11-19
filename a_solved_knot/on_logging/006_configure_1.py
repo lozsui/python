@@ -2,22 +2,10 @@ import logging
 import logging.config
 
 """
-Dieses Skript zeigt wie man Log-Messages in eine Datei ausgeben kann.
-
-Dieses Skript baut auf 006_configure_0.py auf. Siehe Kommentar zu
-configuration_dict was in diesem Skript dazu kommt.
+Dieses Skript zeigt wie man Log-Messages in eine Datei ausgeben kann. Es baut
+auf 006_configure_0.py auf. Siehe Kommentar zu configuration_dict was in
+diesem Skript dazu kommt.
 """
-
-
-def print_logger_infos():
-    """Print all known loggers"""
-    logger_dict = logging.Logger.manager.loggerDict
-    for name, obj in logger_dict.items():
-        if isinstance(obj, logging.Logger):
-            print(
-                f"Logger Name: {name}, Level: {obj.level}, Disabled: {obj.disabled}, Parent: {obj.parent.name}"
-            )
-
 
 # Documentation: https://docs.python.org/3/library/logging.config.html#logging-config-dictschema
 """
@@ -54,8 +42,6 @@ configuration_dict = {
 
 
 logging.config.dictConfig(configuration_dict)
-print_logger_infos()
-
 logger1 = logging.getLogger("logger1")
 logger2 = logging.getLogger("logger2")
 
