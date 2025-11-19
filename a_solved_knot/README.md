@@ -40,6 +40,8 @@ Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class
 
 Source: https://docs.python.org/3/library/logging.html
 
+For what log levels exist in Python see https://docs.python.org/3/library/logging.html#logging-levels
+
 TODO: Verstehen, was ein Filter und was ein Handler ist. Und, verstehen, wann logger1, logger2 etc. Sinn macht.
 
 Für die Logging-Beispiele sind inbesondere folgende Packete wichtig:
