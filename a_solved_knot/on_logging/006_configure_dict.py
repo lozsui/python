@@ -1,6 +1,22 @@
 import logging
 import logging.config
 
+"""
+Dieses Skript zeigt insbesondere:
+
+- Loggen auf die Konsole mit 'logging.StreamHandler'.
+- Verwendung des Filters 'asgi-correlation-id' [1]
+- Verwendung des Formatters 'json' [2]
+- Verwendung des Handlers logging.handlers.RotatingFileHandler
+- Konfiguration verschiedener Logger-Interfaces (logger1 und logger2)
+
+Für weniger komplizierte Logging-Konfigurationen siehe 006_configure_0.py,
+006_configure_1.py usw.
+
+[1] https://github.com/snok/asgi-correlation-id
+[2] https://github.com/nhairs/python-json-logger
+"""
+
 configuration_dict = {
     "version": 1,
     "disable_existing_loggers": False,  # note-1
