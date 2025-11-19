@@ -9,7 +9,7 @@ handlers:
     formatter: simple
     stream: ext://sys.stdout
 loggers:
-  simpleExample:
+  logger1:
     level: DEBUG
     handlers: [console]
     propagate: no
