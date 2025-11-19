@@ -1,19 +1,9 @@
+import logging
 import logging.config
-
-
-def print_logger_infos():
-    """Print all known loggers"""
-    logger_dict = logging.Logger.manager.loggerDict
-    for name, obj in logger_dict.items():
-        if isinstance(obj, logging.Logger):
-            print(
-                f"Logger Name: {name}, Level: {logger.level}, Disabled: {logger.disabled}"
-            )
-
 
 configuration_dict = {
     "version": 1,
-    "disable_existing_loggers": False,
+    "disable_existing_loggers": False,  # note-1
     "filters": {
         "correlation_id": {
             "()": "asgi_correlation_id.CorrelationIdFilter",
@@ -56,8 +46,25 @@ configuration_dict = {
     },
 }
 
-logger = logging.getLogger("Initial-Logger")
-print(f"Logger Name: {logger.name} Disabled: {logger.disabled}")
 
-#logging.config.dictConfig(configuration_dict)
-#print_logger_infos()
+def print_logger_infos():
+    """Print all known loggers"""
+    logger_dict = logging.Logger.manager.loggerDict
+    for name, obj in logger_dict.items():
+        if isinstance(obj, logging.Logger):
+            print(f"Logger Name: {name}, Level: {obj.level}, Disabled: {obj.disabled}")
+
+
+logger = logging.getLogger("My Logger")
+
+logging.config.dictConfig(configuration_dict)
+print_logger_infos()
+
+"""
+@note-1:
+
+Man kann hier von True auf False wechseln oder umgekehrt. Die Ausgabe von
+print_logger_infos() wechselt entsprechend von beispielsweise
+'Logger Name: My Logger, Level: 0, Disabled: True' auf
+'Logger Name: My Logger, Level: 0, Disabled: False' oder umgekehrt.
+"""
