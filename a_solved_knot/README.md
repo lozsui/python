@@ -32,6 +32,14 @@ Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class
 
 # On Logging
 
+> The basic classes defined by the module, together with their attributes and methods, are listed in the sections below.
+> - Loggers expose the interface that application code directly uses.
+> - Handlers send the log records (created by loggers) to the appropriate destination.
+> - Filters provide a finer grained facility for determining which log records to output.
+> - Formatters specify the layout of log records in the final output.
+
+Source: https://docs.python.org/3/library/logging.html
+
 TODO: Verstehen, was ein Filter und was ein Handler ist. Und, verstehen, wann logger1, logger2 etc. Sinn macht.
 
 Für die Logging-Beispiele sind inbesondere folgende Packete wichtig:
