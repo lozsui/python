@@ -40,12 +40,30 @@ Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class
 
 Source: https://docs.python.org/3/library/logging.html
 
-For what log levels exist in Python see https://docs.python.org/3/library/logging.html#logging-levels
-
 Für die Logging-Beispiele sind inbesondere folgende Packete wichtig:
 
 - python-json-logger==4.0.0
 - asgi-correlation-id==4.3.4
+
+## Formatter
+
+- https://docs.python.org/3/library/logging.html#formatter-objects
+
+Für Möglichkeiten für den Formatierungsstring (siehe fmt im Listing unten) siehe
+https://docs.python.org/3/library/logging.html#logrecord-attributes.
+
+```
+formatter = logging.Formatter(
+    fmt="%(filename)s %(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M",
+    style="%",
+)
+```
+
+## Log Levels
+
+- https://docs.python.org/3/library/logging.html#logging-levels
+
 
 # Parse Things
 
