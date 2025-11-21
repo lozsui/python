@@ -1,3 +1,22 @@
+"""
+Insbesondere wird in 008_multi_dest_N_formats.log
+
+11-21 17:59 root         INFO     Jackdaws love my big sphinx of quartz.
+11-21 17:59 myapp.area1  DEBUG    Quick zephyrs blow, vexing daft Jim.
+11-21 17:59 myapp.area1  INFO     How quickly daft jumping zebras vex.
+11-21 17:59 myapp.area2  WARNING  Jail zesty vixen who grabbed pay from quack.
+11-21 17:59 myapp.area2  ERROR    The five boxing wizards jump quickly.
+
+geschrieben. Auf der Standardausgabe sieht es wie im Listing unten aus
+
+root        : INFO     Jackdaws love my big sphinx of quartz.
+myapp.area1 : INFO     How quickly daft jumping zebras vex.
+myapp.area2 : WARNING  Jail zesty vixen who grabbed pay from quack.
+myapp.area2 : ERROR    The five boxing wizards jump quickly.
+
+Die Formatierung und das Log-Level unterscheidet sich.
+"""
+
 import logging
 
 # set up logging to file - see previous section for more details
@@ -5,7 +24,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
     datefmt="%m-%d %H:%M",
-    filename="myapp.log",
+    filename="008_multi_dest_N_formats.log",
     filemode="w",
 )
 # define a Handler which writes INFO messages or higher to the sys.stderr
