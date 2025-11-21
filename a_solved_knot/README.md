@@ -32,6 +32,9 @@ Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class
 
 # On Logging
 
+Example one to five are copied from ['Logging HOWTO by Vinay Sajip'](https://docs.python.org/3/howto/logging.html). They
+can be considered as simple getting started examples.
+
 > The basic classes defined by the module, together with their attributes and methods, are listed in the sections below.
 > - Loggers expose the interface that application code directly uses.
 > - Handlers send the log records (created by loggers) to the appropriate destination.
@@ -64,6 +67,9 @@ formatter = logging.Formatter(
 
 - https://docs.python.org/3/library/logging.html#logging-levels
 
+## Weitere Links
+
+- ['Capture Log Fixture in Pytest'](../learnpytest/test_log.py)
 
 # Parse Things
 
