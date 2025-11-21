@@ -3,23 +3,23 @@ import threading
 import time
 
 
-def worker(arg):
+def worker(arg, worker_name):
     while not arg["stop"]:
-        logging.debug("Hi from myfunc")
+        logging.debug("Hi from myfunc", extra={"context": worker_name})
         time.sleep(1)
 
 
 def main():
     logging.basicConfig(
         level=logging.DEBUG,
-        format="%(name)s %(relativeCreated)6d %(threadName)s %(message)s",
+        format="|%(name)s | %(relativeCreated)6d | %(threadName)s | %(message)s| %(context)s",
     )
     info = {"stop": False}
-    thread = threading.Thread(target=worker, args=(info,))
+    thread = threading.Thread(target=worker, args=(info, "guardian-of-house"))
     thread.start()
     while True:
         try:
-            logging.debug("Hello from main")
+            logging.debug("Hello from main", extra={"context": "MAIN-THREAD"})
             time.sleep(3)
         except KeyboardInterrupt:
             info["stop"] = True
