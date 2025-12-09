@@ -123,6 +123,15 @@ Stand 16. Oktober 2025
 
 ## Virtual Environments
 
+### Aktuell verwendetes .venv
+
+Im Listing unten ist gezeigt, wie man herausfindet, in welchem .venv man sich gerade befindet.
+
+    (.venv) PS C:\Temp\python> python
+    >>> import sys
+    >>> print(sys.prefix)
+    C:\Temp\python\a_solved_knot\.venv
+
 ### Virtual Environment auf Linux
 
     rupert@lx1g9:~/003-github.com/python/a_solved_knot$ python -m venv .venv
