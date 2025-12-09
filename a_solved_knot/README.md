@@ -20,6 +20,14 @@ This code is supposed to show how a command line util can be setup. Es benützt 
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello Samuel
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello "Hans Jürgen"
 
+# On CMD Util
+
+TODO: Write something about it.
+
+# On Exceptions
+
+TODO: Write something about it.
+
 # On Klassen
 
 Bei Luciano Ramalho (Fluent Python) habe ich zu 'Data Class Builder' dazugelernt. Wie man im Buch 'Fluent Python' liest kann man als 'Shortcuts' die unten genannten Konstrukte brauchen, um 'data classes' zu schreiben:
@@ -73,9 +81,17 @@ formatter = logging.Formatter(
 
 - ['Capture Log Fixture in Pytest'](../learnpytest/test_log.py)
 
-# Parse Things
+# On os
+
+next
+
+# On Parse Things
 
 Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeignet zu sein für einfaches XML 'parsing' sowie Manipulation.
+
+# On Visualizing Dataflow
+
+Das funktioniert noch nicht.
 
 # Anhang
 
