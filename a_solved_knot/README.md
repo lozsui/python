@@ -20,7 +20,7 @@ This code is supposed to show how a command line util can be setup. Es benützt 
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello Samuel
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello "Hans Jürgen"
 
-# Klassen
+# On Klassen
 
 Bei Luciano Ramalho (Fluent Python) habe ich zu 'Data Class Builder' dazugelernt. Wie man im Buch 'Fluent Python' liest kann man als 'Shortcuts' die unten genannten Konstrukte brauchen, um 'data classes' zu schreiben:
 
@@ -31,6 +31,8 @@ Bei Luciano Ramalho (Fluent Python) habe ich zu 'Data Class Builder' dazugelernt
 Spannend finde ich in seinem Buch folgenden Hinweis: "After covering those class builders, we will discuss why Data Class is also the name of a code smell: a coding pattern that may be a symptom of poor object-oriented design.'
 
 # On Logging
+
+In 'on_fastapi' kann man schauen, wie logging im Kontext von fastapi und uvicorn konfiguriert werden kann.
 
 Example one to five are copied from ['Logging HOWTO by Vinay Sajip'](https://docs.python.org/3/howto/logging.html). They
 can be considered as simple getting started examples.
@@ -116,4 +118,7 @@ Im Listing unten ein Beispiel wie ein '.venv' auf Windows aktiviert wird.
 
     PS C:\Temp\python\a_solved_knot> python.exe -m venv .venv
     PS C:\Temp\python\a_solved_knot> .\.venv\Scripts\Activate.ps1
-    
+
+Im Listing unten ist gezeigt wie pip auf Windows aktualsiert werden kann.
+
+    (.venv) PS C:\Temp\python\a_solved_knot> python -m pip install --upgrade pip
