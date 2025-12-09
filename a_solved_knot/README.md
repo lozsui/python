@@ -9,7 +9,13 @@
 
 Es geht hier darum mein Python wissen zu repetieren und es in meinen Alltag einzubetten.
 
-# CMD Util
+# On Built in Functions
+
+## test_filter.py
+
+Beispiel zum Filtern einer Zahlenliste oder einer Objektliste (Personen).
+
+# On CMD Util
 
 This code is supposed to show how a command line util can be setup. Es benützt die Libraty [Typer on pypi.org](https://pypi.org/project/typer).
 
@@ -19,10 +25,6 @@ This code is supposed to show how a command line util can be setup. Es benützt 
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello --help
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello Samuel
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello "Hans Jürgen"
-
-# On CMD Util
-
-TODO: Write something about it.
 
 # On Exceptions
 
@@ -80,6 +82,14 @@ formatter = logging.Formatter(
 ## Weitere Links
 
 - ['Capture Log Fixture in Pytest'](../learnpytest/test_log.py)
+
+# On Mathematics
+
+Siehe auch https://docs.python.org/3/library/numeric.html
+
+## test_decimal_round.py
+
+Ein Anfang um zu lernen wie man mit Python zahlen runden kann. TODO: Herausfinden wie man 1/3 auf 1.35 runden kann.
 
 # On os
 
