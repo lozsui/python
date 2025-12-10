@@ -107,6 +107,10 @@ Das funktioniert noch nicht.
 
 # Anhang
 
+## Literatur
+
+- Ramalho 2022: Ramalho, Luciano; Fluent Python 2nd Edition, 2022
+
 ## pytests ausführen
 
 Im Listing unten ist gezeigt, wie alle Tests aus 'a solved knot' auf einmal ausgeführt werden können.
