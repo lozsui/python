@@ -1,12 +1,6 @@
-# Introduction
+# TODO
 
-Here I am just experimenting with the examples from chapter 8 in [Fluent Python 2nd edition](https://learning.oreilly.com/library/view/fluent-python-2nd/9781492056348) by Luciano Ramelho. Luciano Ramelhos examples can be found on [github](https://github.com/fluentpython/example-code-2e/tree/master/08-def-type-hints).
-
-In chapter 8 of Ramelhos books one reads: "They [type hints] are also the main focus of Chapter 15 [...]".
-
-# Installing Requirments
-
-See [Setting Up a Virtual Environmen](../README.md#setting-up-a-virtual-environment-windows)
+Merge notes here into a_solved_knot/README.md
 
 # Notes About Code Samples
 

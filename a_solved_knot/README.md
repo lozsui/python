@@ -97,15 +97,29 @@ Ein Anfang um zu lernen wie man mit Python zahlen runden kann. TODO: Herausfinde
 
 Ein Beispiel zur Methode 'os.listdir(MEIN_PFAD)'.
 
-# On Parse Things
+# On Parsing Things
 
 Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeignet zu sein für einfaches XML 'parsing' sowie Manipulation.
+
+# On Type Hints
+
+Bei Ramalho (2022) has a chapter 8 'Type Hints in Functions' and chapter 15 'More About Type Hints'.
+
+Die Beispiele dieses Abschnitts bedürfen der Installtion des Python-Packets mypy (siehe ../requirements.txt).
+
+Siehe im Listing unten 'to get started'.
+
+    (.venv) PS C:\Temp\python\a_solved_knot\on_type_hints> mypy .
 
 # On Visualizing Dataflow
 
 Das funktioniert noch nicht.
 
 # Anhang
+
+## Links
+
+- Ramelhos (2022) examples can be found on [github](https://github.com/fluentpython/example-code-2e/tree/master/
 
 ## Literatur
 
