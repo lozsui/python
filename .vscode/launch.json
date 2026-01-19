@@ -13,6 +13,21 @@
             "cwd": "${workspaceRoot}/tests",
             "envFile": "${workspaceRoot}/tests/.env",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Simple",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug With ENV File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "envFile": "${workspaceRoot}/a_solved_knot/on_debug/.env",
+            "console": "integratedTerminal"
         }
     ]
 }

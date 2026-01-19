@@ -26,6 +26,12 @@ This code is supposed to show how a command line util can be setup. Es benützt 
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello Samuel
     (.venv) shb@lx1g9:~/003-github.com/python/a_solved_knot/cmd_util$ python cli.py hello "Hans Jürgen"
 
+# On Debug
+
+Im launch.json hat es in 'configurations' zwei Konfigurationen: 'Debug Simple' und 'Debug With EVN File'. Mit 'Debug Simple' kann man irgendeine Datei öffnen, auf das 'Run/Debug' Icon gehen, 'Debug Simple' auswählen und so das aktuell geöffnete Skript ausführen oder eben debuggen. Wenn das Skript ein '.env' benötigt, geht man analog vor, benützt aber 'Debug With ENV File'.
+
+Zum Ausprobieren kann man 'hello_world.py' oder 'debug_with_env_file.py' im Ordner 'on_debug' verwenden.
+
 # On Exceptions
 
 TODO: Write something about it.
