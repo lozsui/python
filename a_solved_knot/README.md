@@ -107,6 +107,10 @@ Ein Beispiel zur Methode 'os.listdir(MEIN_PFAD)'.
 
 Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeignet zu sein für einfaches XML 'parsing' sowie Manipulation.
 
+# On Pydantic
+
+Es hat erst ein Beispiel wie man 'Settings' (eine Konfiguration) in einem Ojekt 'Settings' darstellen kann.
+
 # On Type Hints
 
 Bei Ramalho (2022) has a chapter 8 'Type Hints in Functions' and chapter 15 'More About Type Hints'.
