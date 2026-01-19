@@ -107,6 +107,8 @@ Bei Ramalho (2022) has a chapter 8 'Type Hints in Functions' and chapter 15 'Mor
 
 Die Beispiele dieses Abschnitts bedürfen der Installtion des Python-Packets mypy (siehe ../requirements.txt).
 
+TIPP: Am besten den Code in 'on_type_hints' lesen und wenn man nicht versteht, was passiert eine KI fragen. MIT DEM CODE HERUMSPIELEN!
+
 Siehe im Listing unten 'to get started'.
 
     (.venv) PS C:\Temp\python\a_solved_knot\on_type_hints> mypy .
