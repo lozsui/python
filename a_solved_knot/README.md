@@ -97,6 +97,14 @@ Siehe auch https://docs.python.org/3/library/numeric.html
 
 Ein Anfang um zu lernen wie man mit Python zahlen runden kann. TODO: Herausfinden wie man 1/3 auf 1.35 runden kann.
 
+# On Open Ports
+
+Es handelt sich um ein Kommandozeilen-Programm. Man kann es benützen, um mit Python zu prüfen, ob auf einem Host Port XY geöffnet ist.
+
+```
+(.venv) PS C:\Temp\python\a_solved_knot\on_open_ports> python.exe .\check_port.py --help
+```
+
 # On os
 
 ## file_listener.py
