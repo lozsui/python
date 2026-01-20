@@ -119,6 +119,16 @@ Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeig
 
 Es hat erst ein Beispiel wie man 'Settings' (eine Konfiguration) in einem Ojekt 'Settings' darstellen kann.
 
+# On Requests
+
+Beispiele wie das Packet 'requests' benutzt werden kann:
+
+- Plain Vanilla Verwendung
+- Verwendung mit einem Proxy
+- Abfragen eines Token
+- Authorisierung mit Verwendung eines Token
+
+
 # On Type Hints
 
 Bei Ramalho (2022) has a chapter 8 'Type Hints in Functions' and chapter 15 'More About Type Hints'.
