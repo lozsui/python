@@ -32,7 +32,8 @@ def get_with_token(url):
         print("An error occurred:", e)
 
 
-def get_token(url, user, pwd):
+@app.command()
+def get_token(url: str, user: str, pwd: str):
     payload = {"name": user, "password": pwd}
 
     try:
@@ -47,7 +48,7 @@ def get_token(url, user, pwd):
 
 
 @app.command()
-def get_with_proxy(url):
+def get_with_proxy(url: str):
     """
     Get URL by using a proxy.
 
