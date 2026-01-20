@@ -1,35 +1,8 @@
 import requests
+import typer
+from proxy_settings import proxies
 
-proxies = {
-    "http": "secret",
-    "https": "secret",
-}
-
-
-def get_with_proxy_and_verify_false(url):
-    try:
-        response = requests.get(url, proxies=proxies, verify=False)
-        response.raise_for_status()
-        print("Status Code:", response.status_code)
-        print("Response Body:")
-        print(response.text)
-    except requests.exceptions.RequestException as e:
-        print("An error occurred:", e)
-
-
-def get(url):
-    """
-    Comparing to 'get_with_proxy_and_verify_false' this methode 'get' does not use
-    a proxy.
-    """
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        print("Status Code:", response.status_code)
-        print("Response Body:")
-        print(response.text)
-    except requests.exceptions.RequestException as e:
-        print("An error occurred:", e)
+app = typer.Typer()
 
 
 def get_with_token(url):
@@ -73,5 +46,39 @@ def get_token(url, user, pwd):
         print("An error occurred:", e)
 
 
+@app.command()
+def get_with_proxy(url):
+    """
+    Get URL by using a proxy.
+
+    :param url: URL you want to query
+    """
+    try:
+        response = requests.get(url, proxies=proxies, verify=False)
+        response.raise_for_status()
+        print("Status Code:", response.status_code)
+        print("Response Body:")
+        print(response.text)
+    except requests.exceptions.RequestException as e:
+        print("An error occurred:", e)
+
+
+@app.command()
+def simple_get(url: str):
+    """
+    Comparing to 'get_with_proxy_and_verify_false' this methode 'get' does not use
+    a proxy.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        print("Status Code:", response.status_code)
+        print("Response Body:")
+        print(response.text)
+    except requests.exceptions.RequestException as e:
+        print("An error occurred:", e)
+
+
 if __name__ == "__main__":
-    get(url="https://acme.com/")
+    app()
+    app()

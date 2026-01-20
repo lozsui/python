@@ -121,6 +121,8 @@ Es hat erst ein Beispiel wie man 'Settings' (eine Konfiguration) in einem Ojekt 
 
 # On Requests
 
+'requests==2.32.5' im requirements.txt ist insbesondere für die Requests-Beispiele da.
+
 Beispiele wie das Packet 'requests' benutzt werden kann:
 
 - Plain Vanilla Verwendung
@@ -128,6 +130,20 @@ Beispiele wie das Packet 'requests' benutzt werden kann:
 - Abfragen eines Token
 - Authorisierung mit Verwendung eines Token
 
+## Getting Started
+
+Im selben Ordner wo requests_examples.py gespeichert ist, muss es eine Datei 'proxy_settings.py' geben mit einem Inhalt wie im Listing unten gezeigt.
+
+```
+proxies = {
+    "http": "http://secret:sauce@foo:8080",
+    "https": "http://secret:sauce@foo:8080",
+}
+```
+
+```
+python requests_examples.py --help
+```
 
 # On Type Hints
 
