@@ -145,6 +145,10 @@ proxies = {
 python requests_examples.py --help
 ```
 
+# On SNB API
+
+On playing with data api of Swiss National Bank. And an exmple on Plotting data using matplotlib.pyplot.
+
 # On Type Hints
 
 Bei Ramalho (2022) has a chapter 8 'Type Hints in Functions' and chapter 15 'More About Type Hints'.

@@ -1,1 +1,3 @@
 on_requests/proxy_settings.py
+on_snb_api/snb_cache.sqlite
+on_snb_api/usd_chf.png
