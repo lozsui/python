@@ -119,6 +119,12 @@ Mein Beispiel hier benützt 'xml.etree.ElementTree'. 'ElementTree' scheint geeig
 
 Es hat erst ein Beispiel wie man 'Settings' (eine Konfiguration) in einem Ojekt 'Settings' darstellen kann.
 
+# On Pytest
+
+Showcases
+
+- pass argument to a fixture
+
 # On Requests
 
 'requests==2.32.5' im requirements.txt ist insbesondere für die Requests-Beispiele da.
