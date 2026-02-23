@@ -1,5 +1,7 @@
 """
-Hint: Although conftest.py is a Python module, it should not be imported by test files. The conftest.py file gets read by pytest automatically, so you don’t have import conftest anywhere.
+Hint: Although conftest.py is a Python module, it should not be imported
+by test files. The conftest.py file gets read by pytest automatically, so
+you don’t have import conftest anywhere.
 """
 from pathlib import Path  # used in chapter 3 
 from tempfile import TemporaryDirectory # used in chapter 3 

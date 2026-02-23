@@ -57,6 +57,10 @@ def test_finish(cards_db, start_summary, start_state):
     assert card.state == "done"
 
 
+"""
+Mit 'pytest -v -m smoke .\test_func_param.py::test_finish_simple'
+wird nur der Test mit Parameter "in-prog" ausgeführt.
+"""
 @pytest.mark.parametrize(
         "start_state",
         [
@@ -97,7 +101,10 @@ def pytest_generate_tests(metafunc):
     if "start_state_gen" in metafunc.fixturenames:
         metafunc.parametrize("start_state_gen", ["done", "in prog", "todo"])
 
-
+"""
+start_state_gen ist das Bindeglied zwischen test_finish_test_generation
+und pytest_generate_tests.
+"""
 def test_finish_test_generation(cards_db, start_state_gen):
     c = Card("One fits all", state=start_state_gen)
     index = cards_db.add_card(c)

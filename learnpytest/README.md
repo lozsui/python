@@ -83,7 +83,31 @@ Im Beispiel unten wird 'test_AHY45rt33FYK' aus 'test_count.py' ausgeführt, weil
 (.venv) PS C:\GIT\github\python\learnpytest> pytest -m run_these_please
 ```
 
+BEACHTE, DASS run_these_please NICHT IN pytest.ini AUFGEFÜHRT IST. OFFENBAR BRAUCHT ES DIES IN NEUEREN pytest-VERSIONEN NICHT MEHR.
+
 Siehe [Marker Example](./test_count.py)
+
+Ein weiteres Beispiel wie man Marker verwenden kann findet man in 'test_func_param.py::test_finish_simple'.
+
+## Increase Verbosity "-v"
+
+Wenn man Test mit "-v"-Option ausführt, kriegt man wie unten gezeigt insbesondere eine detaillierte Ausgabe, welche Test mit insbesondere welchen Parameter ausgeführt wurden.
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -v
+...SNIP...
+test_autouse.py::test_1 PASSED [  2%]
+...SNIP...
+test_func_param.py::test_finish [write a book-done] PASSED [ 31%]
+test_func_param.py::test_finish [second edition-in prog] PASSED [ 34%]
+test_func_param.py::test_finish [create a course-todo] PASSED [ 36%] 
+...SNIP...
+test_less_than.py::test_skip SKIPPED (Card doesn't support < comparision yet) [ 57%] 
+...SNIP...
+test_xfail.py::test_less_than XFAIL (Card < comparison not supported in 1.x) [ 95%] 
+test_xfail.py::test_xpass XPASS (XPASS demo) [ 97%] 
+test_xfail.py::test_xfail_strict FAILED [100%] 
+```
 
 ## Show Print Statements "-s"
 

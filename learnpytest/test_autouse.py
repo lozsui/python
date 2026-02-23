@@ -1,5 +1,7 @@
 """
 Autouse fixtures don't have to be named by the test function.
+
+Use 'autouse=True' to get a fixture to run all of the time.
 """
 
 import pytest
