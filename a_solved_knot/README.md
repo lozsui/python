@@ -222,7 +222,7 @@ Im Listing unten ist gezeigt, wie man herausfindet, in welchem .venv man sich ge
 
 ### Virtual Environment auf Linux
 
-    rupert@lx1g9:~/003-github.com/python/a_solved_knot$ python -m venv .venv
+    rupert@lx1g9:~/003-github.com/python/a_solved_knot$ C:\GNOT\python\python.3.11.2\python.exe -m venv .venv
     rupert@lx1g9:~/003-github.com/python/a_solved_knot$ source .venv/bin/activate
 
 ### Virtual Environment auf Windows

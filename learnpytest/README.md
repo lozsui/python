@@ -19,7 +19,7 @@ Code in this folder is supposed to help me while reading [Python Testing with Py
 Initialize .venv
 
 ```
-PS C:\Temp\python\learnpytest> & C:/GNOT/python/python.3.11.2/python.exe -m venv .venv
+PS C:\GIT\github\python\learnpytest> C:\GNOT\python\python.3.11.2\python.exe -m venv .venv
 ```
 
 At work where I need a proxy configuaration I had to put pip.ini into root of .venv.
@@ -33,17 +33,26 @@ proxy = http://proxy.highly.secure:8080
 And finally...
 
 ```
-PS C:\Temp\python\learnpytest> .venv/Scripts/Activate.ps1
-(.venv) PS C:\Temp\python\learnpytest> python.exe -m pip install --upgrade pip
-(.venv) PS C:\Temp\python\learnpytest> pip install ./cards_proj
-(.venv) PS C:\Temp\python\learnpytest> pip install -r requirements.txt
+PS C:\GIT\github\python\learnpytest> .venv/Scripts/Activate.ps1
+(.venv) PS C:\GIT\github\python\learnpytest> python -m pip install --upgrade pip
+(.venv) PS C:\GIT\github\python\learnpytest> pip install ./cards_proj
+(.venv) C:\GIT\github\python\learnpytest> pip install -r requirements.txt
 ```
 
 # Run tests
 
+Alle Tests ausführen:
+
 ```
-pytest test_count.py
-pytest -k test_empty
+(.venv) PS C:\GIT\github\python\learnpytest> pytest
+```
+
+Beachte, dass 'test_xfail.py::test_xfail_strict' auf die Schnauze fällt. Das ist beabsichtigt zu Demonstrationszwecken.
+
+Test einzeln ausführen:
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest .\test_count.py
 ```
 
 # Pytest Command-Line Flags
@@ -52,28 +61,75 @@ pytest -k test_empty
 pytest --help # is your friend
 ```
 
+## Run Test by Keyword
+
+Im Beispiel unten wird 'test_AHY45rt33FYK' aus 'test_count.py' ausgeführt:
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -k AHY45rt33FYK
+```
+
+Im Beispiel unten werden alle Tests aus 'test_count.py' ausgeführt:
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -k count
+```
 
 ## Run Tests by Marker
 
+Im Beispiel unten wird 'test_AHY45rt33FYK' aus 'test_count.py' ausgeführt, weil dort ein entsprechender Marker gesetzt ist:
+
 ```
-pytest -m markerxy
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -m run_these_please
 ```
 
-See [Marker Example](./test_start.py)
+Siehe [Marker Example](./test_count.py)
 
 ## Show Print Statements "-s"
 
+Mit dieser Option kann man sich Print-Statements aus Tests ausgeben lasssen. Ein Beispieltest, um dies auszuprobieren ist:
+
 ```
-pytest -s test_whatever.py
-Basic Test.
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -s test_count.py
+test_count.py test_AHY45rt33FYK
 ```
 
 ## Show Extra Test Summary "-r"
 
 ```
-pytest -ra test_whatever.py
+show extra test summary info as specified by chars
+(f)ailed, (E)error, (s)skipped, (x)failed, (X)passed,
+(p)passed, (P)passed with output, (a)all except pP.
+```
+
+### "-rp" vs "-rf" simpel
+
+Die Option "-rp" zeigt 'short test summary info' aller tests, welche erfolgreich sind. Wenn man die gleichen Tests mit der Option "rf" ausführt, dann wird kein 'short test summary info' angezeigt, weil keine Tests "failen".
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -rp test_count.py
 === short test summary info === 
-SKIPPED [1] test_whatever.py:5: Method XY not implemented yet
+PASSED test_count.py::test_AHY45rt33FYK
+PASSED test_count.py::test_empty
+PASSED test_count.py::test_two
+```
+
+### XFAIL - expected to fail (-rx)
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -rx .\test_xfail.py
+...SNIP...
+=== short test summary info === 
+XFAIL test_xfail.py::test_less_than - Card < comparison not supported in 1.x
+```
+
+### XPASS - expected to fail but passed (-rX)
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -rX .\test_xfail.py
+...SNIP...
+=== short test summary info === 
+XPASS test_xfail.py::test_xpass - XPASS demo
 ```
 
 ## Trace Config
@@ -107,15 +163,12 @@ SNIP
 ============================== 2 passed in 0.20s ===============================
 ```
 
-## pytest.ini
+## pytest.ini / "-c"
+
+Mit der Option '-c' kann man explizit vorgeben, welches pytest-Konfigurationsdatei verwendet werden soll.
 
 ```
-pytest -s -c tests/pytest.ini
-...snip...
-cat tests/pytest.ini
-[pytest]
-log_cli = true
-log_cli_level = DEBUG
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -c .\pytest-demo.ini .\test_count.py
 ```
 
 ## Keywords
@@ -125,7 +178,7 @@ This is quite impressiv. See [Using Keywords to Select Test Cases in Brians book
 ## setup-show
 
 ```
-PS C:\Temp\python\learnpytest> pytest --setup-show .\test_count.py
+(.venv) PS C:\GIT\github\python\learnpytest> pytest --setup-show .\test_count.py
 ======================================================================================= test session starts ========================================================================================
 platform win32 -- Python 3.11.2, pytest-8.3.2, pluggy-1.5.0
 rootdir: C:\Temp\python\learnpytest
@@ -143,7 +196,7 @@ TEARDOWN S cards_db
 fixtures shows us a list of all available fixtures our test can use. This list includes a bunch of builtin fixtures that we’ll look at in the next chapter, as well as those provided by plugins.
 
 ```
-PS C:\Temp\python\learnpytest> pytest --fixtures -v
+(.venv) PS C:\GIT\github\python\learnpytest> pytest --fixtures -v
 ```
 
 ## capture
