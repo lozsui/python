@@ -121,11 +121,7 @@ Es hat erst ein Beispiel wie man 'Settings' (eine Konfiguration) in einem Ojekt 
 
 # On Pytest
 
-Siehe auch [Learn Pytest](../learnpytest/README.md)
-
-Showcases
-
-- pass argument to a fixture
+Siehe [Learn Pytest](../learnpytest/README.md)
 
 # On Requests
 

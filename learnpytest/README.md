@@ -44,7 +44,7 @@ PS C:\GIT\github\python\learnpytest> .venv/Scripts/Activate.ps1
 Alle Tests ausführen:
 
 ```
-(.venv) PS C:\GIT\github\python\learnpytest> pytest
+(.venv) PS C:\GIT\github\python\learnpytest> pytest -v
 ```
 
 Beachte, dass 'test_xfail.py::test_xfail_strict' auf die Schnauze fällt. Das ist beabsichtigt zu Demonstrationszwecken.
