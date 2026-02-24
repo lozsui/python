@@ -17,6 +17,9 @@ def test_version_v2(capsys):
     assert output == cards.__version__
 
 
+"""
+Hier tangiert man bereits 'Mocking' wie im Buch von Brian Okken erklärt.
+"""
 def test_version_v3():
     runner = CliRunner()
     result = runner.invoke(cards.app, ["version"])

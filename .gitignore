@@ -8,3 +8,4 @@ powershell.exe.lnk
 webserver/*.*
 webserver/tests/*.*
 question.txt
+okken-examples/*

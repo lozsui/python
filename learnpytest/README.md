@@ -12,7 +12,7 @@
 
 # Introduction
 
-Code in this folder is supposed to help me while reading [Python Testing with Pytest by Brian Okken](https://learning.oreilly.com/library/view/python-testing-with/9781680509427/).
+Code in this folder is supposed to help me while reading [Python Testing with Pytest by Brian Okken](https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/). Source Code to the examples can be found on this page.
 
 # Setting Up on Microsoft Windows 10
 
@@ -37,6 +37,14 @@ PS C:\GIT\github\python\learnpytest> .venv/Scripts/Activate.ps1
 (.venv) PS C:\GIT\github\python\learnpytest> python -m pip install --upgrade pip
 (.venv) PS C:\GIT\github\python\learnpytest> pip install ./cards_proj
 (.venv) C:\GIT\github\python\learnpytest> pip install -r requirements.txt
+```
+
+# Using The Cards Application
+
+```
+(.venv) PS C:\GIT\github\python\learnpytest\cards_proj\src\cards> cards --help
+(.venv) PS C:\GIT\github\python\learnpytest\cards_proj\src\cards> cards add --help
+(.venv) PS C:\GIT\github\python\learnpytest\cards_proj\src\cards> # etc.
 ```
 
 # Run tests
@@ -236,4 +244,4 @@ PS C:\Temp\python\learnpytest> pytest --capture=no test_autouse.py
 
 ## Questions to Scope
 
-- What does 'scope="module"' mean.
+Ein Verständnis dafür entwickeln, welchen Einfluss die verschiedenen Scope-Konfigurationen (module, session etc.) in einem fixture haben.
