@@ -28,6 +28,14 @@
             "program": "${file}",
             "envFile": "${workspaceRoot}/a_solved_knot/on_debug/.env",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Proj Structure main",
+            "type": "python",
+            "request": "launch",
+            "module": "a_project_structure.src.main",
+            "console": "integratedTerminal",
+            "args": ["-c", "config.json"]
         }
     ]
 }

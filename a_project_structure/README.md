@@ -1,6 +1,23 @@
 # Introduction
 
-Goal of this project is to show how to set up a project structure with focus on running pytests.
+Wenn man mit Modulen arbeitet, hat man manchmal das Problem, dass die Module nicht gefunden werden. Hier halte ich ein Projekt vor, wo diese Probleme nicht auftreten.
+
+Für das Ausführen der 'pytests' scheint 'pytest.ini' im tests-Ordner entscheidend zu sein.
+
+In 'launch.json' gibt es insbesondere
+
+```
+        {
+            "name": "Proj Structure main",
+            "type": "python",
+            "request": "launch",
+            "module": "a_project_structure.src.main",
+            "console": "integratedTerminal",
+            "args": ["-c", "config.json"]
+        }
+```
+
+Dies hilt einem, um mit dem Debugger durch a_project_structure.src.main zu stolpern.
 
 # Installing Requirments / Setup
 
