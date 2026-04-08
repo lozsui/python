@@ -2,6 +2,10 @@ import requests
 import typer
 from proxy_settings import proxies
 
+"""
+Schaue im README.md wie proxies ausschauen muss.
+"""
+
 app = typer.Typer()
 
 
@@ -81,5 +85,4 @@ def simple_get(url: str):
 
 
 if __name__ == "__main__":
-    app()
     app()
