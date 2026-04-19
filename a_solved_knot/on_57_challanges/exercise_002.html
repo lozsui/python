@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Counter</title>
+</head>
+<body>
+  <input type="text" id="entry" placeholder="Enter a string" />
+  <p id="counter">0 characters</p>
+
+  <script>
+    const entry = document.getElementById("entry");
+    const counter = document.getElementById("counter");
+
+    entry.addEventListener("input", () => {
+      counter.textContent = `${entry.value.length} characters`;
+    });
+  </script>
+</body>
+</html>

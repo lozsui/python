@@ -9,6 +9,13 @@
 
 Es geht hier darum mein Python wissen zu repetieren und es in meinen Alltag einzubetten.
 
+# On 57 Challanges
+
+Übungen aus dem Buch 'Exercises for Programmers 57 Challanges to Develop Your Coding Skills' von Biran P. Hogan.
+
+Bis auf Weiteres verwende ich für diese Übungen 'a_solved_knot/.venv'.
+
+
 # On Built in Functions
 
 ## test_filter.py
